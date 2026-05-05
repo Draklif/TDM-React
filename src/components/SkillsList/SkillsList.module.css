@@ -8,6 +8,7 @@
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 2rem;
+  color: var(--text-primary);
 }
 
 .tags {
@@ -18,15 +19,15 @@
 
 .tag {
   padding: 0.5rem 1.2rem;
-  border: 1px solid #333;
+  border: 1px solid var(--border-color);
   border-radius: 999px;
   font-size: 0.9rem;
-  color: #ccc;
-  background: #111;
+  color: var(--text-secondary);
+  background: var(--tag-bg);
   transition: border-color 0.2s, color 0.2s;
 }
 
 .tag:hover {
-  border-color: #666;
-  color: #fff;
+  border-color: var(--border-hover);
+  color: var(--text-primary);
 }

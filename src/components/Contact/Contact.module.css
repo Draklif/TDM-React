@@ -8,10 +8,11 @@
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 0.75rem;
+  color: var(--text-primary);
 }
 
 .subtitle {
-  color: #888;
+  color: var(--text-secondary);
   margin-bottom: 2.5rem;
   line-height: 1.6;
 }
@@ -30,51 +31,52 @@
 
 .field label {
   font-size: 0.85rem;
-  color: #888;
+  color: var(--text-secondary);
 }
 
 .field input,
 .field textarea {
-  background: #111;
-  border: 1px solid #222;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
   border-radius: 6px;
   padding: 0.75rem 1rem;
-  color: #f0f0f0;
+  color: var(--text-primary);
   font-size: 0.95rem;
   font-family: inherit;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, background 0.3s;
   resize: vertical;
 }
 
 .field input:focus,
 .field textarea:focus {
   outline: none;
-  border-color: #555;
+  border-color: var(--border-hover);
 }
 
 .btn {
   align-self: flex-start;
   padding: 0.8rem 2rem;
-  background: #f0f0f0;
-  color: #0a0a0a;
+  background: var(--btn-bg);
+  color: var(--btn-color);
   border: none;
   border-radius: 6px;
   font-size: 0.95rem;
   font-weight: 500;
   cursor: pointer;
   transition: background 0.2s;
+  font-family: inherit;
 }
 
 .btn:hover {
-  background: #ddd;
+  background: var(--btn-hover);
 }
 
 .success {
   padding: 1rem 1.5rem;
-  background: #0f2e1a;
-  border: 1px solid #1a5c34;
+  background: var(--success-bg);
+  border: 1px solid var(--success-border);
   border-radius: 6px;
-  color: #4ade80;
+  color: var(--success-color);
   font-size: 0.95rem;
 }
 

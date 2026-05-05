@@ -8,6 +8,7 @@
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 2rem;
+  color: var(--text-primary);
 }
 
 .filters {
@@ -20,9 +21,9 @@
 .filterBtn {
   padding: 0.5rem 1.2rem;
   border-radius: 999px;
-  border: 1px solid #333;
+  border: 1px solid var(--border-color);
   background: transparent;
-  color: #888;
+  color: var(--text-secondary);
   font-size: 0.875rem;
   cursor: pointer;
   transition: all 0.2s;
@@ -30,14 +31,14 @@
 }
 
 .filterBtn:hover {
-  border-color: #666;
-  color: #fff;
+  border-color: var(--border-hover);
+  color: var(--text-primary);
 }
 
 .active {
-  background: #f0f0f0;
-  color: #0a0a0a;
-  border-color: #f0f0f0;
+  background: var(--btn-bg);
+  color: var(--btn-color);
+  border-color: var(--btn-bg);
 }
 
 .grid {
@@ -47,15 +48,15 @@
 }
 
 .card {
-  background: #111;
-  border: 1px solid #222;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
   border-radius: 10px;
   overflow: hidden;
   transition: border-color 0.2s, transform 0.2s;
 }
 
 .card:hover {
-  border-color: #444;
+  border-color: var(--border-hover);
   transform: translateY(-4px);
 }
 
@@ -74,11 +75,12 @@
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 0.4rem;
+  color: var(--text-primary);
 }
 
 .info p {
   font-size: 0.875rem;
-  color: #888;
+  color: var(--text-secondary);
   line-height: 1.6;
   margin-bottom: 1rem;
 }
@@ -87,12 +89,12 @@
   font-size: 0.75rem;
   padding: 0.25rem 0.75rem;
   border-radius: 999px;
-  border: 1px solid #333;
-  color: #888;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
 }
 
 .empty {
-  color: #555;
+  color: var(--text-muted);
   font-size: 0.95rem;
   padding: 2rem 0;
 }

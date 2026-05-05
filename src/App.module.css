@@ -1,13 +1,45 @@
 .dark {
-  background: #0a0a0a;
-  color: #f0f0f0;
+  --bg-primary: #0a0a0a;
+  --bg-secondary: #111;
+  --bg-tertiary: #1a1a1a;
+  --text-primary: #f0f0f0;
+  --text-secondary: #aaa;
+  --text-muted: #555;
+  --border-color: #222;
+  --border-hover: #444;
+  --btn-bg: #f0f0f0;
+  --btn-color: #0a0a0a;
+  --btn-hover: #ddd;
+  --tag-bg: #111;
+  --success-bg: #0f2e1a;
+  --success-border: #1a5c34;
+  --success-color: #4ade80;
+
+  background: var(--bg-primary);
+  color: var(--text-primary);
   min-height: 100vh;
   transition: background 0.3s, color 0.3s;
 }
 
 .light {
-  background: #fafafa;
-  color: #0a0a0a;
+  --bg-primary: #fafafa;
+  --bg-secondary: #f0f0f0;
+  --bg-tertiary: #e5e5e5;
+  --text-primary: #0a0a0a;
+  --text-secondary: #555;
+  --text-muted: #999;
+  --border-color: #ddd;
+  --border-hover: #bbb;
+  --btn-bg: #0a0a0a;
+  --btn-color: #f0f0f0;
+  --btn-hover: #222;
+  --tag-bg: #f0f0f0;
+  --success-bg: #f0fdf4;
+  --success-border: #86efac;
+  --success-color: #16a34a;
+
+  background: var(--bg-primary);
+  color: var(--text-primary);
   min-height: 100vh;
   transition: background 0.3s, color 0.3s;
 }

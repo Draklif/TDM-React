@@ -13,17 +13,18 @@
   border-radius: 50%;
   object-fit: cover;
   flex-shrink: 0;
-  border: 2px solid #222;
+  border: 2px solid var(--border-color);
 }
 
 .content h2 {
   font-size: 1.8rem;
   font-weight: 600;
   margin-bottom: 1rem;
+  color: var(--text-primary);
 }
 
 .content p {
-  color: #aaa;
+  color: var(--text-secondary);
   line-height: 1.8;
   font-size: 1rem;
 }

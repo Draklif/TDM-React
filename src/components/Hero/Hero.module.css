@@ -9,7 +9,7 @@
 }
 
 .greeting {
-  color: #888;
+  color: var(--text-secondary);
   font-size: 1rem;
   margin-bottom: 0.5rem;
 }
@@ -19,18 +19,19 @@
   font-weight: 700;
   line-height: 1.1;
   margin-bottom: 0.5rem;
+  color: var(--text-primary);
 }
 
 .role {
   font-size: clamp(1.2rem, 3vw, 2rem);
   font-weight: 400;
-  color: #888;
+  color: var(--text-secondary);
   margin-bottom: 1.5rem;
 }
 
 .description {
   font-size: 1.1rem;
-  color: #aaa;
+  color: var(--text-secondary);
   max-width: 500px;
   line-height: 1.7;
   margin-bottom: 2rem;
@@ -39,16 +40,16 @@
 .btn {
   display: inline-block;
   padding: 0.8rem 2rem;
-  border: 1px solid #444;
+  border: 1px solid var(--border-color);
   border-radius: 6px;
   text-decoration: none;
-  color: #fff;
+  color: var(--text-primary);
   font-size: 0.95rem;
   transition: background 0.2s, border-color 0.2s;
   width: fit-content;
 }
 
 .btn:hover {
-  background: #1a1a1a;
-  border-color: #666;
+  background: var(--bg-tertiary);
+  border-color: var(--border-hover);
 }

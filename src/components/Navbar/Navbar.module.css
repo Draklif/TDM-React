@@ -3,17 +3,18 @@
   justify-content: space-between;
   align-items: center;
   padding: 1.2rem 2.5rem;
-  border-bottom: 1px solid #222;
+  border-bottom: 1px solid var(--border-color);
   position: sticky;
   top: 0;
-  background: #0a0a0a;
+  background: var(--bg-primary);
   z-index: 100;
+  transition: background 0.3s;
 }
 
 .logo {
   font-weight: 600;
   font-size: 1.1rem;
-  color: #fff;
+  color: var(--text-primary);
 }
 
 .links {
@@ -24,27 +25,28 @@
 
 .links a {
   text-decoration: none;
-  color: #aaa;
+  color: var(--text-secondary);
   font-size: 0.95rem;
   transition: color 0.2s;
 }
 
 .links a:hover {
-  color: #fff;
+  color: var(--text-primary);
 }
 
 .themeBtn {
   background: transparent;
-  border: 1px solid #333;
+  border: 1px solid var(--border-color);
   border-radius: 999px;
   padding: 0.35rem 1rem;
   font-size: 0.8rem;
   cursor: pointer;
-  color: inherit;
+  color: var(--text-secondary);
   font-family: inherit;
-  transition: border-color 0.2s;
+  transition: border-color 0.2s, color 0.2s;
 }
 
 .themeBtn:hover {
-  border-color: #888;
+  border-color: var(--border-hover);
+  color: var(--text-primary);
 }
