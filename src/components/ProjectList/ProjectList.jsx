@@ -7,7 +7,7 @@ const categories = ['Todos', 'Diseño UI', 'Motion', 'Desarrollo']
 function ProjectList() {
   const [activeFilter, setActiveFilter] = useState('Todos')
 
-  const filtered = activeFilter === 'Todos'
+  const filtered = activeFilter === categories[0]
     ? projects
     : projects.filter((p) => p.category === activeFilter)
 
