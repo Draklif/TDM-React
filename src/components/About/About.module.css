@@ -1,0 +1,29 @@
+.about {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 5rem 2.5rem;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.photo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid #222;
+}
+
+.content h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.content p {
+  color: #aaa;
+  line-height: 1.8;
+  font-size: 1rem;
+}
