@@ -1,14 +1,19 @@
 import styles from './Navbar.module.css'
 
-function Navbar() {
+function Navbar({ darkMode, onToggle }) {
   return (
     <nav className={styles.navbar}>
       <span className={styles.logo}>dev.portfolio</span>
-      <ul className={styles.links}>
-        <li><a href="#about">Sobre mí</a></li>
-        <li><a href="#projects">Proyectos</a></li>
-        <li><a href="#contact">Contacto</a></li>
-      </ul>
+      <div style={{ display: 'flex', alignItems: 'center', gap: '2rem' }}>
+        <ul className={styles.links}>
+          <li><a href="#about">Sobre mí</a></li>
+          <li><a href="#projects">Proyectos</a></li>
+          <li><a href="#contact">Contacto</a></li>
+        </ul>
+        <button className={styles.themeBtn} onClick={onToggle}>
+          {darkMode ? '☀ Claro' : '☾ Oscuro'}
+        </button>
+      </div>
     </nav>
   )
 }

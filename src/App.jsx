@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import Navbar from './components/Navbar/Navbar'
 import Hero from './components/Hero/Hero'
 import About from './components/About/About'
@@ -6,11 +7,18 @@ import ProjectList from './components/ProjectList/ProjectList'
 import Contact from './components/Contact/Contact'
 import Footer from './components/Footer/Footer'
 import { skills } from './data/skills'
+import styles from './App.module.css'
 
 function App() {
+  const [darkMode, setDarkMode] = useState(true)
+
+  function toggleDarkMode() {
+    setDarkMode(!darkMode)
+  }
+
   return (
-    <div>
-      <Navbar />
+    <div className={darkMode ? styles.dark : styles.light}>
+      <Navbar darkMode={darkMode} onToggle={toggleDarkMode} />
       <Hero
         name="Ana García"
         role="Diseñadora & Desarrolladora"
@@ -18,7 +26,7 @@ function App() {
       />
       <About
         photo="https://i.pravatar.cc/300"
-        bio="Soy diseñadora y desarrolladora con foco en experiencias digitales. Me interesa el cruce entre el diseño visual y la tecnología."
+        bio="Soy diseñadora y desarrolladora con foco en experiencias digitales."
       />
       <SkillsList skills={skills} />
       <ProjectList />

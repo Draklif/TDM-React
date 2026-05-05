@@ -32,3 +32,19 @@
 .links a:hover {
   color: #fff;
 }
+
+.themeBtn {
+  background: transparent;
+  border: 1px solid #333;
+  border-radius: 999px;
+  padding: 0.35rem 1rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: inherit;
+  font-family: inherit;
+  transition: border-color 0.2s;
+}
+
+.themeBtn:hover {
+  border-color: #888;
+}
