@@ -10,6 +10,36 @@
   margin-bottom: 2rem;
 }
 
+.filters {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+
+.filterBtn {
+  padding: 0.5rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid #333;
+  background: transparent;
+  color: #888;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.filterBtn:hover {
+  border-color: #666;
+  color: #fff;
+}
+
+.active {
+  background: #f0f0f0;
+  color: #0a0a0a;
+  border-color: #f0f0f0;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -59,4 +89,10 @@
   border-radius: 999px;
   border: 1px solid #333;
   color: #888;
+}
+
+.empty {
+  color: #555;
+  font-size: 0.95rem;
+  padding: 2rem 0;
 }

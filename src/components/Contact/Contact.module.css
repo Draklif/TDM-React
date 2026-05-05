@@ -68,3 +68,18 @@
 .btn:hover {
   background: #ddd;
 }
+
+.success {
+  padding: 1rem 1.5rem;
+  background: #0f2e1a;
+  border: 1px solid #1a5c34;
+  border-radius: 6px;
+  color: #4ade80;
+  font-size: 0.95rem;
+}
+
+.error {
+  font-size: 0.8rem;
+  color: #f87171;
+  margin-top: 0.25rem;
+}
