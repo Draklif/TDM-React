@@ -8,7 +8,7 @@
   top: 0;
   background: var(--bg-primary);
   z-index: 100;
-  transition: background 0.3s;
+  transition: box-shadow 1s ease, border-color 0.3s ease, background 0.3s ease;
 }
 
 .logo {
@@ -49,4 +49,11 @@
 .themeBtn:hover {
   border-color: var(--border-hover);
   color: var(--text-primary);
+}
+
+.scrolled {
+  background: var(--bg-primary);
+  border-bottom-color: var(--border-color);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
 }
