@@ -1,22 +1,66 @@
-import { useInView } from '../../hooks/useInView'
+import { motion } from 'framer-motion'
+import { lazy, Suspense } from 'react'
 import styles from './Hero.module.css'
 
+const Scene = lazy(() => import('../Scene/Scene'))
+
 function Hero({ name, role, description }) {
-  const { ref, inView } = useInView()
-
-  function cls(delay) {
-    return [styles.hidden, inView ? styles.visible : '', styles[delay]].join(' ')
-  }
-
   return (
-    <section className={styles.hero} ref={ref}>
-      <p className={cls('delay1') + ' ' + styles.greeting}>Hola, soy</p>
-      <h1 className={`${styles.name} ${cls('delay2')}`}>{name}</h1>
-      <h2 className={`${styles.role} ${cls('delay3')}`}>{role}</h2>
-      <p className={`${styles.description} ${cls('delay4')}`}>{description}</p>
-      <a href="#projects" className={`${styles.btn} ${cls('delay4')}`}>
-        Ver proyectos
-      </a>
+    <section className={styles.hero}>
+      <div className={styles.content}>
+        <motion.p
+          className={styles.greeting}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+        >
+          Hola, soy
+        </motion.p>
+        <motion.h1
+          className={styles.name}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+        >
+          {name}
+        </motion.h1>
+        <motion.h2
+          className={styles.role}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.35 }}
+        >
+          {role}
+        </motion.h2>
+        <motion.p
+          className={styles.description}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.5 }}
+        >
+          {description}
+        </motion.p>
+        <motion.a
+          href="#projects"
+          className={styles.btn}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+        >
+          Ver proyectos
+        </motion.a>
+      </div>
+
+      <motion.div
+        className={styles.canvas}
+        initial={{ opacity: 0, x: 60 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ duration: 0.8, delay: 0.4, ease: 'easeOut' }}
+      >
+        <Suspense fallback={null}>
+          <Scene />
+        </Suspense>
+      </motion.div>
     </section>
   )
 }
