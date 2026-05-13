@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "title": "Rediseño de app bancaria",
+    "description": "UX/UI para una fintech enfocada en simplicidad y accesibilidad.",
+    "longDescription": "El proyecto buscaba rediseñar la experiencia completa de una app bancaria para reducir la fricción en operaciones cotidianas. Se hicieron entrevistas con usuarios, pruebas de usabilidad y una iteración completa del sistema de diseño.",
+    "category": "Diseño UI",
+    "image": "https://picsum.photos/seed/proj1/400/300",
+    "tags": ["Figma", "UX Research", "Prototipado"],
+    "year": 2024
+  },
+  {
+    "id": 2,
+    "title": "Portfolio motion",
+    "description": "Sitio personal con animaciones en After Effects exportadas a web.",
+    "longDescription": "Diseño y desarrollo de un portfolio personal con foco en motion design. Las animaciones fueron creadas en After Effects y exportadas con Lottie para integrarse en la web sin perder calidad.",
+    "category": "Motion",
+    "image": "https://picsum.photos/seed/proj2/400/300",
+    "tags": ["After Effects", "Lottie", "React"],
+    "year": 2024
+  },
+  {
+    "id": 3,
+    "title": "Tienda online",
+    "description": "E-commerce construido con React y una API de productos.",
+    "longDescription": "Desarrollo completo de un e-commerce con carrito de compras, filtros de productos y checkout. Integrado con una API REST para la gestión del catálogo y pagos con Stripe.",
+    "category": "Desarrollo",
+    "image": "https://picsum.photos/seed/proj3/400/300",
+    "tags": ["React", "Node.js", "Stripe"],
+    "year": 2023
+  },
+  {
+    "id": 4,
+    "title": "Identidad visual",
+    "description": "Sistema de diseño para una startup de tecnología educativa.",
+    "longDescription": "Creación de identidad visual completa: logo, paleta de colores, tipografía, iconografía y componentes de UI. El sistema fue documentado en Figma y entregado como guía de estilo.",
+    "category": "Diseño UI",
+    "image": "https://picsum.photos/seed/proj4/400/300",
+    "tags": ["Figma", "Branding", "Design System"],
+    "year": 2023
+  },
+  {
+    "id": 5,
+    "title": "App de meditación",
+    "description": "Diseño de experiencia y prototipo interactivo en Figma.",
+    "longDescription": "Diseño UX/UI de una app de bienestar con flujos de onboarding, sesiones guiadas y seguimiento de hábitos. El prototipo fue testeado con 20 usuarios reales antes de la entrega.",
+    "category": "Motion",
+    "image": "https://picsum.photos/seed/proj5/400/300",
+    "tags": ["Figma", "UX Research", "Prototipado"],
+    "year": 2024
+  },
+  {
+    "id": 6,
+    "title": "Dashboard analytics",
+    "description": "Visualización de datos en tiempo real para equipos de marketing.",
+    "longDescription": "Dashboard interactivo para visualizar métricas de campañas de marketing en tiempo real. Incluye gráficos, tablas filtrables y exportación de reportes en PDF.",
+    "category": "Desarrollo",
+    "image": "https://picsum.photos/seed/proj6/400/300",
+    "tags": ["React", "D3.js", "REST API"],
+    "year": 2023
+  }
+]

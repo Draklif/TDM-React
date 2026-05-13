@@ -98,3 +98,9 @@
   font-size: 0.95rem;
   padding: 2rem 0;
 }
+
+.cardLink {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
