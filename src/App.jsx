@@ -1,12 +1,14 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, lazy, Suspense } from 'react'
 import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
 import Navbar from './components/Navbar/Navbar'
 import ScrollProgress from './components/ScrollProgress/ScrollProgress'
+import PageTransition from './components/PageTransition/PageTransition'
 import Home from './pages/Home'
 import ProjectDetail from './pages/ProjectDetail'
-import PageTransition from './components/PageTransition/PageTransition'
 import styles from './App.module.css'
+
+const Background = lazy(() => import('./components/Background/Background'))
 
 function AnimatedRoutes({ darkMode, onToggle }) {
   const location = useLocation()
@@ -45,8 +47,13 @@ function App() {
   return (
     <BrowserRouter>
       <div className={darkMode ? styles.dark : styles.light}>
+        <Suspense fallback={null}>
+          <Background />
+        </Suspense>
         <ScrollProgress />
-        <AnimatedRoutes darkMode={darkMode} onToggle={toggleDarkMode} />
+        <div className={styles.content}>
+          <AnimatedRoutes darkMode={darkMode} onToggle={toggleDarkMode} />
+        </div>
       </div>
     </BrowserRouter>
   )

@@ -6,7 +6,8 @@
   border-bottom: 1px solid var(--border-color);
   position: sticky;
   top: 0;
-  background: var(--bg-primary);
+  background: color-mix(in srgb, var(--bg-primary) 70%, transparent);
+  backdrop-filter: blur(12px);
   z-index: 100;
   transition: box-shadow 1s ease, border-color 0.3s ease, background 0.3s ease;
 }

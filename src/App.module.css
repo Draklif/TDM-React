@@ -43,3 +43,8 @@
   min-height: 100vh;
   transition: background 0.3s, color 0.3s;
 }
+
+.content {
+  position: relative;
+  z-index: 1;
+}
