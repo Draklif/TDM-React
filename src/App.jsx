@@ -9,6 +9,7 @@ import ProjectDetail from './pages/ProjectDetail'
 import styles from './App.module.css'
 
 const Background = lazy(() => import('./components/Background/Background'))
+const ScrollModel = lazy(() => import('./components/ScrollModel/ScrollModel'))
 
 function AnimatedRoutes({ darkMode, onToggle }) {
   const location = useLocation()
@@ -49,6 +50,7 @@ function App() {
       <div className={darkMode ? styles.dark : styles.light}>
         <Suspense fallback={null}>
           <Background />
+          <ScrollModel />
         </Suspense>
         <ScrollProgress />
         <div className={styles.content}>

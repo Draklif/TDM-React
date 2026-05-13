@@ -1,0 +1,18 @@
+.home {
+  position: relative;
+}
+
+.scrollSection {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.scrollSection > * {
+  background: color-mix(in srgb, var(--bg-primary) 60%, transparent);
+  backdrop-filter: blur(20px);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  padding: 3rem;
+  width: 100%;
+}
