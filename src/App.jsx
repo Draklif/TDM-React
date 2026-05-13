@@ -1,10 +1,32 @@
 import { useState, useEffect } from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import ScrollProgress from './components/ScrollProgress/ScrollProgress'
+import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom'
+import { AnimatePresence } from 'framer-motion'
 import Navbar from './components/Navbar/Navbar'
+import ScrollProgress from './components/ScrollProgress/ScrollProgress'
 import Home from './pages/Home'
 import ProjectDetail from './pages/ProjectDetail'
+import PageTransition from './components/PageTransition/PageTransition'
 import styles from './App.module.css'
+
+function AnimatedRoutes({ darkMode, onToggle }) {
+  const location = useLocation()
+
+  return (
+    <>
+      <Navbar darkMode={darkMode} onToggle={onToggle} />
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
+          <Route path="/" element={
+            <PageTransition><Home /></PageTransition>
+          } />
+          <Route path="/projects/:id" element={
+            <PageTransition><ProjectDetail /></PageTransition>
+          } />
+        </Routes>
+      </AnimatePresence>
+    </>
+  )
+}
 
 function App() {
   const [darkMode, setDarkMode] = useState(() => {
@@ -24,11 +46,7 @@ function App() {
     <BrowserRouter>
       <div className={darkMode ? styles.dark : styles.light}>
         <ScrollProgress />
-        <Navbar darkMode={darkMode} onToggle={toggleDarkMode} />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects/:id" element={<ProjectDetail />} />
-        </Routes>
+        <AnimatedRoutes darkMode={darkMode} onToggle={toggleDarkMode} />
       </div>
     </BrowserRouter>
   )
