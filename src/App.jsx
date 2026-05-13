@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import ScrollProgress from './components/ScrollProgress/ScrollProgress'
 import Navbar from './components/Navbar/Navbar'
 import Home from './pages/Home'
 import ProjectDetail from './pages/ProjectDetail'
@@ -22,6 +23,7 @@ function App() {
   return (
     <BrowserRouter>
       <div className={darkMode ? styles.dark : styles.light}>
+        <ScrollProgress />
         <Navbar darkMode={darkMode} onToggle={toggleDarkMode} />
         <Routes>
           <Route path="/" element={<Home />} />

@@ -28,3 +28,25 @@
   line-height: 1.8;
   font-size: 1rem;
 }
+
+.hidden {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.photoHidden {
+  opacity: 0;
+  transform: scale(0.9);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.photoVisible {
+  opacity: 1;
+  transform: scale(1);
+}
