@@ -1,0 +1,20 @@
+.vincular {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  color: var(--text-secondary);
+}
+
+.ok {
+  padding: 0.75rem 1rem;
+  background: var(--success-bg);
+  border: 1px solid var(--success-border);
+  border-radius: 6px;
+  color: var(--success-color);
+  font-size: 0.9rem;
+}
+
+.error {
+  font-size: 0.85rem;
+  color: #f87171;
+}

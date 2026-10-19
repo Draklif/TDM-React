@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link } from 'react-router-dom'
 import styles from './Navbar.module.css'
 
 function Navbar({ darkMode, onToggle }) {
@@ -24,6 +25,7 @@ function Navbar({ darkMode, onToggle }) {
           <li><a href="#about">Sobre mí</a></li>
           <li><a href="#projects">Proyectos</a></li>
           <li><a href="#contact">Contacto</a></li>
+          <li><Link to="/tarjetas">Tarjetas</Link></li>
         </ul>
         <button className={styles.themeBtn} onClick={onToggle}>
           {darkMode ? '☀ Claro' : '☾ Oscuro'}

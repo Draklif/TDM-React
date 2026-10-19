@@ -6,6 +6,7 @@ import ScrollProgress from './components/ScrollProgress/ScrollProgress'
 import PageTransition from './components/PageTransition/PageTransition'
 import Home from './pages/Home'
 import ProjectDetail from './pages/ProjectDetail'
+import Tarjetas from './pages/Tarjetas'
 import styles from './App.module.css'
 
 const Background = lazy(() => import('./components/Background/Background'))
@@ -24,6 +25,9 @@ function AnimatedRoutes({ darkMode, onToggle }) {
           } />
           <Route path="/projects/:id" element={
             <PageTransition><ProjectDetail /></PageTransition>
+          } />
+          <Route path="/tarjetas" element={
+            <PageTransition><Tarjetas /></PageTransition>
           } />
         </Routes>
       </AnimatePresence>

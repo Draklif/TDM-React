@@ -1,0 +1,59 @@
+.consultar {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.ficha {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+}
+
+.ficha strong {
+  color: var(--text-primary);
+}
+
+.ficha p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: var(--btn-bg);
+  color: var(--btn-color);
+  font-weight: 600;
+}
+
+.activa,
+.bloqueada {
+  margin-left: auto;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: 999px;
+}
+
+.activa {
+  background: var(--success-bg);
+  color: var(--success-color);
+}
+
+.bloqueada {
+  background: #3b1111;
+  color: #f87171;
+}
+
+.error {
+  font-size: 0.85rem;
+  color: #f87171;
+}

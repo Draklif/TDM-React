@@ -58,3 +58,16 @@
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(10px);
 }
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 1rem;
+  }
+
+  .links {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+}

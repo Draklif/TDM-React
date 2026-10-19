@@ -4,18 +4,62 @@
   gap: 0.75rem;
 }
 
-.reader input {
+.caja {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1.25rem;
+  border: 2px dashed var(--border-hover);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: border-color 0.2s, background 0.2s;
+}
+
+.activo {
+  border-style: solid;
+  border-color: var(--success-border);
+  background: var(--success-bg);
+}
+
+.icono {
+  color: var(--text-muted);
+}
+
+.activo .icono {
+  color: var(--success-color);
+  animation: pulso 1.2s ease-in-out infinite;
+}
+
+@keyframes pulso {
+  50% {
+    opacity: 0.3;
+  }
+}
+
+.estado {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.activo .estado {
+  color: var(--success-color);
+}
+
+.caja input {
   width: 100%;
+  max-width: 320px;
+  text-align: center;
   background: var(--bg-secondary);
   border: 1px solid var(--border-color);
   border-radius: 6px;
-  padding: 0.75rem 1rem;
+  padding: 0.6rem 1rem;
   color: var(--text-primary);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   font-family: monospace;
 }
 
-.reader input:focus {
+.caja input:focus {
   outline: none;
   border-color: var(--border-hover);
 }

@@ -8,6 +8,8 @@ const celularConNfc = 'NDEFReader' in window
 function NfcReader({ onRead }) {
   const [uid, setUid] = useState('')
   const [mensaje, setMensaje] = useState('')
+  // El puente solo escribe en el campo que tiene el foco
+  const [activo, setActivo] = useState(false)
 
   // PC: el NFC Bridge escribe el UID y presiona Enter, que envía el formulario
   function handleSubmit(e) {
@@ -38,13 +40,26 @@ function NfcReader({ onRead }) {
 
   return (
     <div className={styles.reader}>
+      {/* Al ser un <label>, un clic en cualquier parte de la caja enfoca el input */}
       <form onSubmit={handleSubmit}>
-        <input
-          type="text"
-          value={uid}
-          onChange={(e) => setUid(e.target.value)}
-          placeholder="Haz clic aquí y acerca la tarjeta al lector..."
-        />
+        <label className={activo ? `${styles.caja} ${styles.activo}` : styles.caja}>
+          <span className={styles.icono}>
+            <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round">
+              <path d="M6 8.5a6 6 0 0 1 0 7M9.5 6a10 10 0 0 1 0 12M13 3.5a14 14 0 0 1 0 17" />
+            </svg>
+          </span>
+          <span className={styles.estado}>
+            {activo ? 'Listo: acerca la tarjeta al lector' : 'Haz clic aquí para activar el lector'}
+          </span>
+          <input
+            type="text"
+            value={uid}
+            onChange={(e) => setUid(e.target.value)}
+            onFocus={() => setActivo(true)}
+            onBlur={() => setActivo(false)}
+            placeholder="o escribe el UID y presiona Enter"
+          />
+        </label>
       </form>
 
       {celularConNfc && (
