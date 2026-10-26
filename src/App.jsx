@@ -7,6 +7,7 @@ import PageTransition from './components/PageTransition/PageTransition'
 import Home from './pages/Home'
 import ProjectDetail from './pages/ProjectDetail'
 import Tarjetas from './pages/Tarjetas'
+import Mapa from './pages/Mapa'
 import styles from './App.module.css'
 
 const Background = lazy(() => import('./components/Background/Background'))
@@ -28,6 +29,9 @@ function AnimatedRoutes({ darkMode, onToggle }) {
           } />
           <Route path="/tarjetas" element={
             <PageTransition><Tarjetas /></PageTransition>
+          } />
+          <Route path="/mapa" element={
+            <PageTransition><Mapa /></PageTransition>
           } />
         </Routes>
       </AnimatePresence>

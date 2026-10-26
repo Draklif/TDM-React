@@ -26,6 +26,7 @@ function Navbar({ darkMode, onToggle }) {
           <li><a href="#projects">Proyectos</a></li>
           <li><a href="#contact">Contacto</a></li>
           <li><Link to="/tarjetas">Tarjetas</Link></li>
+          <li><Link to="/mapa">Mapa</Link></li>
         </ul>
         <button className={styles.themeBtn} onClick={onToggle}>
           {darkMode ? '☀ Claro' : '☾ Oscuro'}

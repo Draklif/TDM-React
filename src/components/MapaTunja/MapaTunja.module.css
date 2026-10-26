@@ -1,0 +1,7 @@
+.mapa {
+  height: 420px;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  /* Leaflet usa z-index altos; esto evita que tape el Navbar */
+  isolation: isolate;
+}
